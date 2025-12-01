@@ -1,0 +1,418 @@
+/* ---------------------------------------------------------
+   STYLE MODERNE POUR LE DICTIONNAIRE FR ↔ CH
+   Palette : rouge profond (#c0392b), or (#d4af37), blanc pur
+----------------------------------------------------------*/
+
+/* ------------------ GÉNÉRAL ------------------ */
+body {
+    background: #faf8f5;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+/* Ombres douces */
+.shadow-soft {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+/* Titres élégants */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #c0392b;
+}
+
+/* Liens */
+a {
+    color: #c0392b;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------ NAVBAR ------------------ */
+.navbar {
+    border-bottom: 3px solid #d4af37;
+    background: white !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #c0392b !important;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+    color: #c0392b !important;
+}
+
+.nav-link:hover {
+    color: #922b21 !important;
+}
+
+/* ------------------ BOUTONS ------------------ */
+.btn-red {
+    background: #c0392b;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 18px;
+}
+.btn-red:hover {
+    background: #922b21;
+}
+
+/* Version bouton or */
+.btn-gold {
+    background: #d4af37;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 18px;
+}
+.btn-gold:hover {
+    background: #b7950b;
+}
+
+/* ------------------ CARDS ------------------ */
+.card {
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+}
+.card-header {
+    background: #c0392b;
+    color: white;
+    font-weight: 600;
+}
+
+/* ------------------ FORMULAIRE ------------------ */
+input, textarea, select {
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+    padding: 10px 12px !important;
+    background: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #c0392b !important;
+    box-shadow: 0 0 4px rgba(192, 57, 43, 0.3) !important;
+}
+
+/* ------------------ TABLES ------------------ */
+.table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #c0392b;
+    color: white;
+    border-bottom: none;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background: #fff4f3;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    background: #c0392b !important;
+    color: white !important;
+    border-top: 3px solid #d4af37;
+}
+
+footer a {
+    color: #d4af37;
+    font-weight: 500;
+}
+footer a:hover {
+    color: white;
+}
+
+/* ------------------ PAGE D'ACCUEIL (ANIMATION) ------------------ */
+#welcome-screen {
+    background: linear-gradient(135deg, #c0392b, #922b21);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 1s ease 2s forwards;
+}
+
+@keyframes fadeout {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ------------------ RESULTATS DE RECHERCHE ------------------ */
+.result-box {
+    background: white;
+    padding: 20px;
+    border-left: 4px solid #c0392b;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Mot chinois en grand */
+.big-chinese {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #c0392b;
+}
+
+/* Pinyin */
+.pinyin {
+    font-size: 1.3rem;
+    color: #b7950b;
+    font-style: italic;
+}
+
+/* ------------------ SYSTEME DE NOTE ------------------ */
+.star {
+    font-size: 1.6rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.star:hover,
+.star.active {
+    color: #d4af37;
+}
+
+/* ------------------ ADMIN ------------------ */
+.admin-menu a {
+    display: block;
+    padding: 10px 15px;
+    border-left: 3px solid transparent;
+    color: #333;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.admin-menu a:hover {
+    background: #fff4f3;
+    border-left-color: #c0392b;
+    color: #922b21;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+    .big-chinese {
+        font-size: 1.8rem;
+    }
+
+    .pinyin {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================
+   STYLE COMPLET POUR L'ESPACE ADMIN
+   Palette : rouge impérial (#a31515), or léger (#d4af37)
+   Design carré, pro, lisible
+========================================================== */
+
+/* ------------------ LAYOUT ------------------ */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f8f4f0;
+}
+
+/* ------------------ SIDEBAR ------------------ */
+.admin-sidebar {
+    width: 260px;
+    background: #a31515;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.2);
+}
+
+.admin-sidebar h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* menu */
+.admin-sidebar a {
+    display: block;
+    color: #ffe7e7;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-left: 5px solid transparent;
+    transition: 0.25s;
+}
+
+.admin-sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+    padding-left: 30px;
+    border-left: 5px solid #d4af37;
+    color: #fff;
+}
+
+/* actif */
+.admin-sidebar a.active {
+    background: rgba(255,255,255,0.2);
+    border-left: 5px solid #d4af37;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ------------------ CONTENT ------------------ */
+.admin-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.admin-content h3 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #a31515;
+    margin-bottom: 25px;
+}
+
+/* ------------------ BOUTONS ------------------ */
+
+.btn-admin {
+    background: #a31515;
+    color: white !important;
+    border-radius: 6px;
+    padding: 9px 16px;
+    border: none;
+}
+
+.btn-admin:hover {
+    background: #7d1111;
+}
+
+.btn-admin-gold {
+    background: #d4af37;
+    color: #fff !important;
+    border-radius: 6px;
+    padding: 9px 16px;
+}
+
+.btn-admin-gold:hover {
+    background: #b9960b;
+}
+
+/* ------------------ TABLES ------------------ */
+.table-admin {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    margin-top: 20px;
+}
+
+.table-admin thead {
+    background: #a31515;
+    color: white;
+    border-bottom: none;
+}
+
+.table-admin tbody tr:nth-child(even) {
+    background: #fff8f4;
+}
+
+/* actions */
+.admin-actions .btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* ------------------ FORMULAIRES ------------------ */
+.admin-form input,
+.admin-form textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    padding: 10px;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    border-color: #a31515 !important;
+    box-shadow: 0 0 5px rgba(163,21,21,0.3) !important;
+}
+
+/* labels */
+.admin-form label {
+    font-weight: 600;
+    color: #a31515;
+}
+
+/* card */
+.admin-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* ------------------ LOGIN ADMIN ------------------ */
+.login-bg {
+    background: linear-gradient(135deg, #a31515, #7d1111);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+    color: #a31515;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 900px) {
+    .admin-sidebar {
+        width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .admin-sidebar a {
+        display: inline-block;
+        width: auto;
+        padding: 12px 15px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    .admin-sidebar a:hover {
+        border-left: none;
+        border-bottom: 3px solid #d4af37;
+    }
+}
